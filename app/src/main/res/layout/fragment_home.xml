@@ -14,17 +14,30 @@
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
 
         <Button
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Breathing"
-            android:id="@+id/button"
+            android:id="@+id/breathingButton"
             android:textColor="@color/white"
             android:background="@color/blue"
             android:onClick="launchBreathing"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lift Your Mood"
+            android:id="@+id/button"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:onClick="launchLiftYourMood"
             />
 
     </LinearLayout>

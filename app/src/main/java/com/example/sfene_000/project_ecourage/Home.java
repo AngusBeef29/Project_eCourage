@@ -38,13 +38,6 @@ public class Home extends Fragment {
         //mPage = getArguments().getInt(ARG_PAGE);
     }
 
-
-    public void launchBreathing(View view){
-        Intent intent = new Intent(view.getContext(), breathingActivity.class);
-        getActivity().setResult(Activity.RESULT_OK, intent);
-        getActivity().finish();
-    }
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

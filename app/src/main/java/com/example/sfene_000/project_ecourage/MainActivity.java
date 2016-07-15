@@ -34,4 +34,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void launchLiftYourMood(View view) {
+        Intent intent = new Intent(view.getContext(), LiftYourMoodActivity.class);
+        setResult(Activity.RESULT_OK, intent);
+        startActivity(intent);
+    }
+
 }
