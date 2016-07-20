@@ -18,9 +18,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".breathingActivity"
+            android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".LiftYourMoodActivity"></activity>
+        <activity android:name=".tools.LiftYourMoodActivity"></activity>
     </application>
 
 </manifest>
