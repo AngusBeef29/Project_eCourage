@@ -20,7 +20,11 @@
         <activity
             android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".tools.LiftYourMoodActivity"></activity>
+        <activity android:name=".tools.LiftYourMoodActivity" />
+        <activity
+            android:name=".tools.GetSupport"
+            android:label="@string/title_activity_get_support"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
