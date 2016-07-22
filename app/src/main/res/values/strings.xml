@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Project_eCourage</string>
+
     <!-- Login -->
     <string name="ecourage">eCourage</string>
     <string name="welcome_to_ecourage">Welcome to eCourage!</string>
     <string name="sign_in">Sign in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+
     <!-- Sign up -->
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_get_support">GetSupport</string>
@@ -47,5 +49,13 @@
 
     <!-- Lift Your Mood Strings -->
     <string name="LYM_p1">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
+    <string name="LYM_p2">Positive activities are an important part of feeling like life is worth living.</string>
+    <string name="LYM_p3">It is easy for the enjoyable aspects of life to get lost or forgotten, because of traumatic stress and sadness.</string>
+    <string name="LYM_p4">However, the less and less we engage in doing things that make us feel good,the more and more the stress and sadness can take over.</string>
+    <string name="LYM_p5">Integrating Positive Activities back into daily life after trauma can, over time, increase positive feelings and decrease feels like sadness and despair.</string>
+    <string name="LYM_p6">You might think that you have to do BIG things to feel these effects but doing even small things can be helpful.</string>
+    <string name="LYM_p7">It’s important to remember that these activities don’t have to take a lot of time! Start Small!</string>
+    <string name="LYM_p8">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
+
 
 </resources>

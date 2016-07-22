@@ -15,7 +15,7 @@ import com.viewpagerindicator.CirclePageIndicator;
 
 public class LiftYourMoodActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 2;
+    private static final int NUM_PAGES = 7;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
@@ -59,10 +59,20 @@ public class LiftYourMoodActivity extends FragmentActivity {
             switch (position) {
                 case 0:
                     return new tools_lym_p1();
-
                 case 1:
                     return new tools_lym_p2();
-
+                case 2:
+                    return new tools_lym_p3();
+                case 3:
+                    return new tools_lym_p4();
+                case 4:
+                    return new tools_lym_p5();
+                case 5:
+                    return new tools_lym_p6();
+                case 6:
+                    return new tools_lym_p7();
+                case 7:
+                    return new tools_lym_p8();
             }
             return null;
         }
