@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up"
             android:parentActivityName=".LoginActivity"
@@ -25,11 +24,8 @@
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".LoginActivity" />
+
         <activity
-            android:name=".breathingActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".LiftYourMoodActivity" />
-=======
             android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".tools.LiftYourMoodActivity" />
@@ -37,7 +33,6 @@
             android:name=".tools.GetSupport"
             android:label="@string/title_activity_get_support"
             android:theme="@style/AppTheme"></activity>
->>>>>>> 369b66790c16c6d15d7596a7626560de3726927f
     </application>
 
 </manifest>
