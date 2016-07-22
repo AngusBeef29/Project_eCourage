@@ -5,11 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-<<<<<<< HEAD
         applicationId "com.example.sfene_000.Project_eCourage"
-=======
-        applicationId "com.example.sfene_000.project_ecourage"
->>>>>>> 6dc3d19820051e79ecc981728fac463ea819df9c
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1

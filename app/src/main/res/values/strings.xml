@@ -1,19 +1,14 @@
 <resources>
     <string name="app_name">Project_eCourage</string>
-<<<<<<< HEAD
-    //login
+    <!-- Login -->
     <string name="ecourage">eCourage</string>
-=======
     <string name="welcome_to_ecourage">Welcome to eCourage!</string>
->>>>>>> 6dc3d19820051e79ecc981728fac463ea819df9c
     <string name="sign_in">Sign in</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    //signup
+    <!-- Sign up -->
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_get_support">GetSupport</string>
-<<<<<<< HEAD
-=======
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -22,5 +17,4 @@
     <!-- Lift Your Mood Strings -->
     <string name="LYM_p1">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
 
->>>>>>> 6dc3d19820051e79ecc981728fac463ea819df9c
 </resources>
