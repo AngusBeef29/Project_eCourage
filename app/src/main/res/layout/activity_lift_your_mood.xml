@@ -21,17 +21,9 @@
         android:layout_width="fill_parent"
         android:padding="6dp"
         app:radius="5dp"
-<<<<<<< HEAD
-        app:fillColor="@color/buttonFill"
-        app:pageColor="#00000000"
-        app:strokeColor="#17170457"
-        app:strokeWidth="1dp"
-=======
-
         app:pageColor="@color/colorPrimaryDark"
         app:strokeColor="#00000000"
         app:strokeWidth="2dp"
->>>>>>> cfce6dc14a36c5b71dc724ace90ab6523deba1a2
         android:layout_alignParentBottom="true"
         />
 </RelativeLayout>
