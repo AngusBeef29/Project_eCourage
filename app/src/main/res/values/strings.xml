@@ -1,6 +1,36 @@
 <resources>
     <string name="app_name">Project_eCourage</string>
 
+    <!-- Intro Buttons -->
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">LET\'S GO</string>
+
+    <!-- Intro Slider One Title and Description -->
+    <string name="slideOne_title">Welcome!</string>
+    <string name="slideOne_description">Act with eCourage. Together we can you meet your goals. Swipe to see what you can do!</string>
+    <!-- Intro Slider Two Title and Description -->
+    <string name="slideTwo_title">Importance of Direct Action</string>
+    <string name="slideTwo_description">Survivors of disaster, violence, or other traumas often feel out of control. eCourage will help you decide on simple positive actions that can help strengthen your sense of control.</string>
+    <!-- Intro Slider Three Title and Description -->
+    <string name="slideThree_title">Types of Direct Action</string>
+    <string name="slideThree_description">eCourage can help you calm your body and mind, get support from others, lift your mood, support others as well as yourself, and move towards wise use of alcohol or drugs.</string>
+    <!-- Intro Slider Four Title and Description -->
+    <string name="slideFour_title">Your Own Choices</string>
+    <string name="slideFour_description">eCourage doesn\'t impose any requirements. You set your own goals and choose the means that help you most. We\'re simply here to help! </string>
+    <!-- Intro Slider Five Title and Description -->
+    <string name="slideFive_title">Keep It Simple</string>
+    <string name="slideFive_description">Demo Description</string>
+    <!-- Intro Slider Six Title and Description -->
+    <string name="slideSix_title">Tiny Habits</string>
+    <string name="slideSix_description">Demo Description</string>
+    <!-- Intro Slider Seven Title and Description -->
+    <string name="slideSeven_title">Make a Commitment</string>
+    <string name="slideSeven_description">Demo Description</string>
+    <!-- Intro Slider Eight Title and Description -->
+    <string name="slideEight_title">5-Minute Daily Challenge</string>
+    <string name="slideEight_description">Demo Description</string>
+
     <!-- Login -->
     <string name="ecourage">eCourage</string>
     <string name="welcome_to_ecourage">Welcome to eCourage!</string>
@@ -15,7 +45,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
     <!-- Lift Your Mood Strings -->
     <string name="LYM_p1">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
     <string name="LYM_p2">Positive activities are an important part of feeling like life is worth living.</string>
@@ -25,6 +54,5 @@
     <string name="LYM_p6">You might think that you have to do BIG things to feel these effects but doing even small things can be helpful.</string>
     <string name="LYM_p7">It’s important to remember that these activities don’t have to take a lot of time! Start Small!</string>
     <string name="LYM_p8">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
-
 
 </resources>

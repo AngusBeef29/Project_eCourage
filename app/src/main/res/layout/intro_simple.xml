@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/introSliderFive">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/introSliderFive"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@color/introSliderFive"
+            android:src="@drawable/simple_icon"   />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/introSliderFive"
+            android:text="@string/slideFive_title"
+            android:textColor="@android:color/white"
+            android:textSize="39dp"
+            android:textStyle="bold"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/introSliderFive"
+            android:paddingLeft="@dimen/description_padding"
+            android:paddingRight="@dimen/description_padding"
+            android:text="@string/slideFive_description"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/slide_description"  />
+    </LinearLayout>
+</RelativeLayout>

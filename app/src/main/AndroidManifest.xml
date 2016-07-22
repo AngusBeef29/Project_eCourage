@@ -9,12 +9,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".SlidersActivity"
+            android:label="Sliders Activity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SignUpActivity"
@@ -24,7 +29,6 @@
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".LoginActivity" />
-
         <activity
             android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />
