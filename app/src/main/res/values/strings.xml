@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Project_eCourage</string>
-<<<<<<< HEAD
-    <string name="welcome_to_ecourage">Welcome to eCourage!</string>
+    //login
+    <string name="ecourage">eCourage</string>
     <string name="sign_in">Sign in</string>
+    <string name="username">Username</string>
     <string name="password">Password</string>
+    //signup
     <string name="title_activity_sign_up">SignUp</string>
-=======
     <string name="title_activity_get_support">GetSupport</string>
->>>>>>> 369b66790c16c6d15d7596a7626560de3726927f
 </resources>

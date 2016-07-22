@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    style="@style/AppTheme"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +19,7 @@
         android:text="Get Support"
         android:id="@+id/getSupportButton"
         android:textColor="@color/white"
-        android:background="@color/blue"
+        android:background="@color/colorPrimaryDark"
         android:onClick="launchGetSupport"
         />
     <View android:layout_width="10dip" android:layout_height="10dip"/>
@@ -29,7 +30,7 @@
         android:text="Breathing"
         android:id="@+id/breathingButton"
         android:textColor="@color/white"
-        android:background="@color/blue"
+        android:background="@color/colorPrimaryDark"
         android:onClick="launchBreathing"
         />
 
@@ -41,7 +42,7 @@
         android:text="Lift Your Mood"
         android:id="@+id/liftYourMoodbutton"
         android:textColor="@color/white"
-        android:background="@color/blue"
+        android:background="@color/colorPrimaryDark"
         android:onClick="launchLiftYourMood"
         />
 
