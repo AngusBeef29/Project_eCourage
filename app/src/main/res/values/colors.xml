@@ -7,4 +7,56 @@
     <color name="textGrey">#595959</color>
     <color name="buttonGrey">#e6e6e6</color>
     <color name="black">#000000</color>
+
+    <color name="introSliderOne">#E91E63</color>
+    <color name="introSliderTwo">#AB47BC</color>
+    <color name="introSlider3">#5E35B1</color>
+    <color name="introSliderFour">#2196F3</color>
+    <color name="introSliderFive">#00BCD4</color>
+    <color name="introSliderSix">#4CAF50</color>
+    <color name="introSliderSeven">#FF5722</color>
+    <color name="introSliderEight">#607D8B</color>
+
+    <color name="darkDotOne">#C2185B</color>
+    <color name="darkDotTwo">#6A1B9A</color>
+    <color name="darkDotThree">#4527A0</color>
+    <color name="darkDotFour">#1565C0</color>
+    <color name="darkDotFive">#00838F</color>
+    <color name="darkDotSix">#388E3C</color>
+    <color name="darkDotSeven">#D84315</color>
+    <color name="darkDotEight">#37474F</color>
+
+    <color name="lightDotOne">#F8BBD0</color>
+    <color name="lightDotTwo">#E1BEE7</color>
+    <color name="lightDotThree">#D1C4E9</color>
+    <color name="lightDotFour">#81D4FA</color>
+    <color name="lightDotFive">#B2EBF2</color>
+    <color name="lightDotSix">#C8E6C9</color>
+    <color name="lightDotSeven">#FFCCBC</color>
+    <color name="lightDotEight">#CFD8DC</color>
+
+    /* Array of the color items for the lighter dots in the intro sequence.
+     * The array is used for easy access to each color in the activity logic.
+     */
+    <array name="array_light_dot">
+        <item>@color/lightDotOne</item>
+        <item>@color/lightDotTwo</item>
+        <item>@color/lightDotThree</item>
+        <item>@color/lightDotFour</item>
+        <item>@color/lightDotFive</item>
+        <item>@color/lightDotSix</item>
+        <item>@color/lightDotSeven</item>
+        <item>@color/lightDotEight</item>
+    </array>
+
+    <array name="array_dark_dot">
+        <item>@color/darkDotOne</item>
+        <item>@color/darkDotTwo</item>
+        <item>@color/darkDotThree</item>
+        <item>@color/darkDotFour</item>
+        <item>@color/darkDotFive</item>
+        <item>@color/darkDotSix</item>
+        <item>@color/darkDotSeven</item>
+        <item>@color/darkDotEight</item>
+    </array>
 </resources>

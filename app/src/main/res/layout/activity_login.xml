@@ -12,12 +12,15 @@
     <RelativeLayout
         android:layout_width="1dip"
         android:layout_height="fill_parent"
-        android:layout_weight="0.15"></RelativeLayout>
+        android:layout_weight="0.15"
+        android:background="@color/colorPrimaryDark">
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="1dip"
         android:layout_height="fill_parent"
-        android:layout_weight="0.7">
+        android:layout_weight="0.7"
+        android:background="@color/colorPrimaryDark">
 
         <!-- This is the part that's 70% of the total width. I'm inserting a LinearLayout and buttons.-->
         <LinearLayout
@@ -106,6 +109,8 @@
     <RelativeLayout
         android:layout_width="1dip"
         android:layout_height="fill_parent"
-        android:layout_weight="0.15"></RelativeLayout>
+        android:layout_weight="0.15"
+        android:background="@color/colorPrimaryDark">
+    </RelativeLayout>
 
 </LinearLayout>

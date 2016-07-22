@@ -10,9 +10,40 @@
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_get_support">GetSupport</string>
 
+    /* Labels used for the buttons in the intro slider sequence
+    */
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">LET\'S GO</string>
+
+    /* Each pair below describes the title and description (around 1 or 2 sentences) that will display on each slide of the introductory sequence.
+    */
+    <string name="slideOne_title">Welcome!</string>
+    <string name="slideOne_description">Act with eCourage. Together we can you meet your goals. Swipe to see what you can do!</string>
+
+    <string name="slideTwo_title">Importance of Direct Action</string>
+    <string name="slideTwo_description">Survivors of disaster, violence, or other traumas often feel out of control. eCourage will help you decide on simple positive actions that can help strengthen your sense of control.</string>
+
+    <string name="slideThree_title">Types of Direct Action</string>
+    <string name="slideThree_description">eCourage can help you calm your body and mind, get support from others, lift your mood, support others as well as yourself, and move towards wise use of alcohol or drugs.</string>
+
+    <string name="slideFour_title">Your Own Choices</string>
+    <string name="slideFour_description">eCourage doesn\'t impose any requirements. You set your own goals and choose the means that help you most. We\'re simply here to help! </string>
+
+    <string name="slideFive_title">Keep It Simple</string>
+    <string name="slideFive_description">Demo Description</string>
+
+    <string name="slideSix_title">Tiny Habits</string>
+    <string name="slideSix_description">Demo Description</string>
+
+    <string name="slideSeven_title">Make a Commitment</string>
+    <string name="slideSeven_description">Demo Description</string>
+
+    <string name="slideEight_title">5-Minute Daily Challenge</string>
+    <string name="slideEight_description">Demo Description</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     <!-- Lift Your Mood Strings -->
     <string name="LYM_p1">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
