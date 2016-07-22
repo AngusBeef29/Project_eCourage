@@ -1,6 +1,5 @@
 package com.example.sfene_000.project_ecourage;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +7,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.example.sfene_000.project_ecourage.tools.LiftYourMoodActivity;
+import com.example.sfene_000.project_ecourage.tools.breathingActivity;
 
 public class MainActivity extends AppCompatActivity {
     android.app.ActionBar actionBar;
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchLiftYourMood(View view) {
+        Intent intent = new Intent(view.getContext(), LiftYourMoodActivity.class);
+        setResult(Activity.RESULT_OK, intent);
+        startActivity(intent);
+    }
+
+    public void launchGetSupport(View view) {
         Intent intent = new Intent(view.getContext(), LiftYourMoodActivity.class);
         setResult(Activity.RESULT_OK, intent);
         startActivity(intent);

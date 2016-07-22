@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Project_eCourage</string>
+    <string name="title_activity_get_support">GetSupport</string>
 </resources>
