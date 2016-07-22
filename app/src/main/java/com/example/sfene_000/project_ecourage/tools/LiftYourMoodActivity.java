@@ -18,7 +18,7 @@ import com.example.sfene_000.project_ecourage.tools.LiftYourMoodFragments.tools_
 
 public class LiftYourMoodActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 8;
+    private static final int NUM_PAGES = 2;
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
 
@@ -57,7 +57,15 @@ public class LiftYourMoodActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new tools_lym_p1();
+            switch (position) {
+                case 0:
+                    return new tools_lym_p1();
+
+                case 1:
+                    return new tools_lym_p1();
+
+            }
+            return null;
         }
 
         @Override
