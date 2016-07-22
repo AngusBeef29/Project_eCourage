@@ -7,9 +7,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.sfene_000.project_ecourage.LiftYourMoodActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="JOHN"/>
+    tools:context="com.example.sfene_000.project_ecourage.tools.LiftYourMoodActivity">
+    <ViewFlipper
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/viewFlipper"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/slide1"
+            android:src="@drawable/kuma_cambodia_happy_children_3"
+            android:layout_gravity="top"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/slide2"
+            android:src="@drawable/kuma_cambodia_happy_children_3"
+            android:layout_gravity="top"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/slide3"
+            android:src="@drawable/kuma_cambodia_happy_children_3"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:id="@+id/slide4"
+            android:src="@drawable/kuma_cambodia_happy_children_3"
+            android:layout_gravity="bottom"
+            />
+
+    </ViewFlipper>
 </RelativeLayout>
