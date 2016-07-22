@@ -39,7 +39,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="65dp"
+                android:textSize="45sp"
                 android:gravity="center_horizontal"
                 android:typeface="normal" />
 

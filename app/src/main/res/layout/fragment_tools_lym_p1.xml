@@ -9,12 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD
         android:text="@string/hello_blank_fragment"
         android:textColor="@color/textBoxFill"/>
-=======
-        android:text="hello_blank_fgthjrefaorijpefitorfejpifrgtorijpfeafigdsrjiperagment"
-        android:textColor="@color/white"/>
->>>>>>> 1ce1c12357f385efa4a7f9cc91b542135445a626
 
 </LinearLayout>
