@@ -22,8 +22,9 @@
         android:padding="6dp"
         app:radius="5dp"
         app:fillColor="@color/buttonGrey"
-        app:pageColor="#00000000"
-        app:strokeColor="#17170457"
-        app:strokeWidth="1dp"
+        app:pageColor="#00008B"
+        app:strokeColor="#00000000"
+        app:strokeWidth="2dp"
+        android:layout_alignParentBottom="true"
         />
 </RelativeLayout>
