@@ -21,7 +21,7 @@
         android:layout_width="fill_parent"
         android:padding="6dp"
         app:radius="5dp"
-        app:fillColor="@color/buttonGrey"
+        app:fillColor="@color/buttonFill"
         app:pageColor="#00000000"
         app:strokeColor="#17170457"
         app:strokeWidth="1dp"

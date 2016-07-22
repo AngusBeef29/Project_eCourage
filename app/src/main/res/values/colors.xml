@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4da6ff</color>
-    <color name="colorPrimaryDark">#004080</color>
+    <color name="colorPrimary">#004d99</color>
+    <color name="colorPrimaryDark">#003366</color>
     <color name="colorAccent">#99ccff</color>
+    <color name="buttonFill">#004080</color>
+
+    <color name="textBoxBorder">#595959</color>
+    <color name="textBoxFill">#ffffff</color>
+    <color name="textBoxText">#595959</color>
     <color name="white">#ffffff</color>
-    <color name="textGrey">#595959</color>
-    <color name="buttonGrey">#e6e6e6</color>
-    <color name="black">#000000</color>
+
+    <!--99ccff light blue-->
+    <!--4da6ff medium blue-->
+    <!--004080 dark blue-->
+    <!--f2f2f2 light grey-->
+    <!--595959 dark grey-->
+    <!--ffffff white-->
+    <!--000000 black-->
+
 </resources>
