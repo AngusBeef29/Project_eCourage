@@ -24,6 +24,7 @@
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".LoginActivity" />
+
         <activity
             android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />
