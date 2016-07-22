@@ -19,10 +19,11 @@ public class tools_lym_p1 extends Fragment {
     }
 
     @SuppressLint("SetTextI18n")
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_tools_lym_p1ad, container, false);
+        View view = inflater.inflate(R.layout.fragment_tools_lym_p1, container, false);
         return view;
     }
 }
