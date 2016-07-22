@@ -1,21 +1,16 @@
 package com.example.sfene_000.project_ecourage.tools;
 
-import android.support.v4.app.Fragment;
+import  android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ViewFlipper;
-import android.view.MotionEvent;
-import android.app.Activity;
 
 import com.example.sfene_000.project_ecourage.R;
-import com.example.sfene_000.project_ecourage.tools.LiftYourMoodFragments.tools_lym_p1;
+import com.example.sfene_000.project_ecourage.tools.LiftYourMoodFragments.*;
 import com.viewpagerindicator.CirclePageIndicator;
-import com.viewpagerindicator.TitlePageIndicator;
 
 
 public class LiftYourMoodActivity extends FragmentActivity {
@@ -66,7 +61,7 @@ public class LiftYourMoodActivity extends FragmentActivity {
                     return new tools_lym_p1();
 
                 case 1:
-                    return new tools_lym_p1();
+                    return new tools_lym_p2();
 
             }
             return null;

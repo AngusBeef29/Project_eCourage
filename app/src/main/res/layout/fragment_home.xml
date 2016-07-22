@@ -18,8 +18,7 @@
         android:layout_height="50dp"
         android:text="Get Support"
         android:id="@+id/getSupportButton"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:onClick="launchGetSupport"
         />
     <View android:layout_width="10dip" android:layout_height="10dip"/>
@@ -29,8 +28,7 @@
         android:layout_height="50dp"
         android:text="Breathing"
         android:id="@+id/breathingButton"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:onClick="launchBreathing"
         />
 
@@ -41,8 +39,7 @@
         android:layout_height="50dp"
         android:text="Lift Your Mood"
         android:id="@+id/liftYourMoodbutton"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         android:onClick="launchLiftYourMood"
         />
 
