@@ -14,6 +14,8 @@ import android.app.Activity;
 
 import com.example.sfene_000.project_ecourage.R;
 import com.example.sfene_000.project_ecourage.tools.LiftYourMoodFragments.tools_lym_p1;
+import com.viewpagerindicator.CirclePageIndicator;
+import com.viewpagerindicator.TitlePageIndicator;
 
 
 public class LiftYourMoodActivity extends FragmentActivity {
@@ -31,6 +33,8 @@ public class LiftYourMoodActivity extends FragmentActivity {
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+        CirclePageIndicator circleIndicator = (CirclePageIndicator)findViewById(R.id.titles);
+        circleIndicator.setViewPager(mPager);
     }
 
 

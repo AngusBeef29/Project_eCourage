@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -14,4 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/titles"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="6dp"
+        app:radius="5dp"
+        app:fillColor="@color/blue"
+        app:pageColor="#00000000"
+        app:strokeColor="#17170457"
+        app:strokeWidth="1dp"
+        />
 </RelativeLayout>
