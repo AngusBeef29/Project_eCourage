@@ -9,18 +9,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity
             android:name=".breathingActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".LiftYourMoodActivity"></activity>
+        <activity android:name=".LiftYourMoodActivity" />
     </application>
 
 </manifest>
