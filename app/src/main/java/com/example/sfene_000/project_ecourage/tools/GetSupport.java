@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.example.sfene_000.Project_eCourage.R;
+import com.example.sfene_000.project_ecourage.R;
 
 public class GetSupport extends AppCompatActivity {
 
