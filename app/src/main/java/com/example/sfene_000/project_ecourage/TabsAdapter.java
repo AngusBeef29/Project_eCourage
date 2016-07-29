@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class TabsAdapter  extends FragmentPagerAdapter {
-    private String tabTitles[] = new String[] { "UserPage Page", "Home", "Tools" };
+    private String tabTitles[] = new String[] { "UserPage", "Home", "Tools" };
     private int TOTAL_TABS = 3;
 
     public TabsAdapter(FragmentManager fm, Context context) {
