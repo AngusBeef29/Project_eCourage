@@ -9,40 +9,53 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    EditText newPassword;
-    EditText confirmPassword;
+    EditText newPasswordField;
+    EditText confirmPasswordField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        newPassword = (EditText)findViewById(R.id.newPasswordField);
-        newPassword.setTypeface(Typeface.DEFAULT);
-        newPassword.setTransformationMethod(new PasswordTransformationMethod());
-        confirmPassword = (EditText)findViewById(R.id.confirmPasswordField);
-        confirmPassword.setTypeface(Typeface.DEFAULT);
-        confirmPassword.setTransformationMethod(new PasswordTransformationMethod());
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        newPasswordField = (EditText) findViewById(R.id.newPasswordField);
+        newPasswordField.setTypeface(Typeface.DEFAULT);
+        newPasswordField.setTransformationMethod(new PasswordTransformationMethod());
+        confirmPasswordField = (EditText) findViewById(R.id.confirmPasswordField);
+        confirmPasswordField.setTypeface(Typeface.DEFAULT);
+        confirmPasswordField.setTransformationMethod(new PasswordTransformationMethod());
+
     }
 
     public void signUp(View view) {
+
+        String newPassword = newPasswordField.getText().toString();
+        String confirmPassword = confirmPasswordField.getText().toString();
+
+        String username = "STUB";
+
+        if (!newPassword.equals(confirmPassword)) {
+            Log.d("SIGNUP:onClick", "password fields do not match!");
+            return;
+        }
+        if (userExists(username)) {
+            Log.d("SIGNUP:onClick", "username already taken!");
+            return;
+        }
+
+        // newUser(email, username, password, isCoach);
+
         Intent intent = new Intent(view.getContext(), MainActivity.class);
         setResult(Activity.RESULT_OK, intent);
         startActivity(intent);
+    }
+
+    // STUB IMPLEMENTATION
+    private boolean userExists(String username) {
+        return false;
     }
 }
