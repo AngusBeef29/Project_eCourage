@@ -43,6 +43,16 @@
                 android:gravity="center_horizontal"
                 android:typeface="normal" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/error"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:typeface="normal" />
+
             <View
                 android:layout_width="10dip"
                 android:layout_height="75dip" />
