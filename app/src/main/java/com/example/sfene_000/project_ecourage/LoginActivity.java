@@ -45,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordField = (EditText)findViewById(R.id.passwordField);
         passwordField.setTypeface(Typeface.DEFAULT);
         passwordField.setTransformationMethod(new PasswordTransformationMethod());
+
     }
 
 
@@ -99,6 +100,7 @@ public class LoginActivity extends AppCompatActivity {
         public LogInUser(Activity activity){
             this.activity= activity;
         }
+
         @Override
         protected String doInBackground(String... params) {
             String username = params[0];
@@ -130,6 +132,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(activity, MainActivity.class);
                 setResult(Activity.RESULT_OK, intent);
                 startActivity(intent);
+                finish();
             }
         }
     }

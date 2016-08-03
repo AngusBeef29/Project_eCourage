@@ -140,6 +140,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Intent intent = new Intent(activity, MainActivity.class);
                 setResult(Activity.RESULT_OK, intent);
                 startActivity(intent);
+                finish();
             }
         }
 
