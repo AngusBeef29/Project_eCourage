@@ -51,23 +51,14 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view) {
         String username = usernameField.getText().toString();
         String password = passwordField.getText().toString();
-
-
-        String[] params = new String[]{username, password};
+        String passwordHash = encode(password);
+        Log.d("password",passwordHash);
+        String[] params = new String[]{username.toLowerCase(), passwordHash};
         LogInUser signUpUser = new LogInUser(this);
         signUpUser.execute(params);
-        //String passwordHash = encode(password);
 
-       // Log.d("LOGINTEST:onClick", "encode(" + password + "): " + passwordHash);
 
-       // if (loginSuccessful(username, password)) {
-//            Log.d("LOGINTEST:onClick", "success!");
-//            Intent intent = new Intent(view.getContext(), MainActivity.class);
-//            setResult(Activity.RESULT_OK, intent);
-//            startActivity(intent);
-//        } else {
-//            Log.d("LOGINTEST:onClick", "fail.");
-//        }
+
     }
 
     public void signUp(View view) {
@@ -112,43 +103,17 @@ public class LoginActivity extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String username = params[0];
             String password = params[1];
-            Random randomGenerator = new Random();
+
             if(username.length()>0 && password.length()>0){
                 String url = "http://ecourage.org/sql_query.php?nFunction=2&username="+username+"&password="+password;
-                URL obj = null;
-                HttpURLConnection con = null;
-                try {
-                    obj = new URL(url);
-                    con = (HttpURLConnection) obj.openConnection();
-                    con.setRequestMethod("GET");
-                    con.connect();
-                    int responseCode = con.getResponseCode();
-                    BufferedReader in = new BufferedReader(
-                            new InputStreamReader(con.getInputStream()));
-                    String inputLine;
-                    StringBuffer response = new StringBuffer();
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-                    JSONObject json = new JSONObject(response.toString());
-                    Log.d("BUTT",json.get("message").toString());
-                    String responseMessage = json.get("message").toString();
-                    if(responseMessage.equals("log in successful")){
-                        return "logged in";
-                    } else{
-                        return "wrong password";
-                    }
-                } catch (MalformedURLException e) {
-                    return "error";
-                } catch (IOException e) {
-                    return "error";
-                } catch (JSONException e) {
-                    return "error";
-                } finally {
-                    con.disconnect();
+                Log.d("password",url);
+                String responseMessage = (new ConnectionManager(url)).getResponseMessage();
+                Log.d("password",responseMessage);
+                if(responseMessage.equals("log in successful")){
+                    return "logged in";
+                } else{
+                    return "wrong password";
                 }
-
             }
             return "empty field";
         }

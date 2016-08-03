@@ -64,12 +64,11 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         if (!newPassword.equals(confirmPassword)) {
-            TextView error =(TextView) findViewById(R.id.error);
-            error.setText("Passwords don't match");
+            setErrorMessage("Passwords don't match");
             return;
         }
-
-        String[] params = new String[]{username, newPassword,email};
+        Log.d("password",encode(newPassword));
+        String[] params = new String[]{username.toLowerCase(), encode(newPassword),email};
         SignUpUser signUpUser = new SignUpUser(this);
         signUpUser.execute(params);
 
@@ -100,11 +99,16 @@ public class SignUpActivity extends AppCompatActivity {
         }
         return buff.toString();
     }
+    private void setErrorMessage(String errorMessage){
+        TextView error =(TextView) findViewById(R.id.error);
+        error.setText(errorMessage);
+    }
+
 
     private class SignUpUser extends AsyncTask<String, Void, String> {
         private Activity activity;
         public SignUpUser(Activity activity){
-            this.activity= activity;
+            this.activity = activity;
         }
         @Override
         protected String doInBackground(String... params) {
@@ -114,40 +118,12 @@ public class SignUpActivity extends AppCompatActivity {
             Random randomGenerator = new Random();
             if(username.length()>0 && password.length()>0 && email.length()>0){
                 String url = "http://ecourage.org/sql_query.php?nFunction=4&username="+username+"&password="+password+"&coach_code="+ randomGenerator.nextInt(100000) +"&email="+email;
-                URL obj = null;
-                HttpURLConnection con = null;
-                try {
-                    obj = new URL(url);
-                    con = (HttpURLConnection) obj.openConnection();
-                    con.setRequestMethod("GET");
-                    con.connect();
-                    int responseCode = con.getResponseCode();
-                    BufferedReader in = new BufferedReader(
-                            new InputStreamReader(con.getInputStream()));
-                    String inputLine;
-                    StringBuffer response = new StringBuffer();
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-                    in.close();
-                    JSONObject json = new JSONObject(response.toString());
-                    Log.d("BUTT",json.get("message").toString());
-                    String responseMessage = json.get("message").toString();
-                    if(responseMessage.equals("user successfully created")){
-                        return "user created";
-                    } else{
-                        return "user exists already";
-                    }
-                } catch (MalformedURLException e) {
-                    return "error";
-                } catch (IOException e) {
-                    return "error";
-                } catch (JSONException e) {
-                    return "error";
-                } finally {
-                    con.disconnect();
+                String responseMessage = (new ConnectionManager(url)).getResponseMessage();
+                if(responseMessage.equals("user successfully created")){
+                    return "user created";
+                } else{
+                    return "user exists already";
                 }
-
             }
             return "empty field";
         }
@@ -155,20 +131,19 @@ public class SignUpActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             if(result.equals("empty field")){
-                TextView error =(TextView) findViewById(R.id.error);
-                error.setText("One or more fields is missing your information!");
+                setErrorMessage("One or more fields is missing your information!");
             } else if(result.equals("user exists already")) {
-                TextView error =(TextView) findViewById(R.id.error);
-                error.setText("that username is already taken. Try another!");
+                setErrorMessage("that username is already taken. Try another!");
             } else if(result.equals("error")) {
-                TextView error =(TextView) findViewById(R.id.error);
-                error.setText("Something went wrong on our end :( Try again Later");
+                setErrorMessage("Something went wrong on our end :( Try again Later");
             } else {
                 Intent intent = new Intent(activity, MainActivity.class);
                 setResult(Activity.RESULT_OK, intent);
                 startActivity(intent);
             }
         }
+
+
     }
 
 }
