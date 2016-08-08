@@ -67,6 +67,7 @@ public class SlidersActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                sliderManager.setFirst(false);
                 Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
@@ -80,6 +81,7 @@ public class SlidersActivity extends AppCompatActivity {
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
                 } else {
+                    sliderManager.setFirst(false);
                     Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
                     startActivity(i);
                     finish();

@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class TabsAdapter  extends FragmentPagerAdapter {
-    private String tabTitles[] = new String[] { "User Page", "Home", "Tools" };
+    private String tabTitles[] = new String[] { "UserPage", "Home", "Tools" };
     private int TOTAL_TABS = 3;
 
     public TabsAdapter(FragmentManager fm, Context context) {
@@ -20,7 +20,7 @@ public class TabsAdapter  extends FragmentPagerAdapter {
         // TODO Auto-generated method stub
         switch (index) {
             case 0:
-                return new User();
+                return new UserPage();
 
             case 1:
                 return new Home();

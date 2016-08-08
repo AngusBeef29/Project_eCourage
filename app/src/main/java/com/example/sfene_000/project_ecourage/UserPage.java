@@ -11,20 +11,20 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link User.OnFragmentInteractionListener} interface
+ * {@link user.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link User#newInstance} factory method to
+ * Use the {@link user#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class User extends Fragment {
+public class UserPage extends Fragment {
     public static final String ARG_PAGE = "1";
 
     private int mPage;
 
-    public static User newInstance(int page) {
+    public static UserPage newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        User fragment = new User();
+        UserPage fragment = new UserPage();
         fragment.setArguments(args);
         return fragment;
     }

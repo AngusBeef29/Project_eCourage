@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project_eCourage</string>
+    <string name="app_name">eCourage</string>
 
     <!-- Intro Buttons -->
     <string name="next">NEXT</string>
