@@ -11,4 +11,12 @@
     <dimen name="slide_title">40dp</dimen>
     <dimen name="slide_description">18dp</dimen>
     <dimen name="description_padding">40dp</dimen>
+
+    <!-- Dimensions for Breathing Activity features -->
+    <dimen name="activityButtonText">25dp</dimen>
+    <dimen name="infoButtonText">17dp</dimen>
+    <dimen name="breathingButtonHeight">142dp</dimen>
+    <dimen name="breathingStartButton">315dp</dimen>
+    <dimen name="progressBarThickness">10dp</dimen>
+
 </resources>

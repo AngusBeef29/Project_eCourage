@@ -9,10 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.sfene_000.project_ecourage.tools.LiftYourMoodActivity;
-import com.example.sfene_000.project_ecourage.tools.breathingActivity;
+import com.example.sfene_000.project_ecourage.tools.breathingActivity.breathingActivityHome;
 
 public class MainActivity extends AppCompatActivity {
     android.app.ActionBar actionBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void launchBreathing(View view) {
-        Intent intent = new Intent(view.getContext(), breathingActivity.class);
+        Intent intent = new Intent(view.getContext(), breathingActivityHome.class);
         setResult(Activity.RESULT_OK, intent);
         startActivity(intent);
     }

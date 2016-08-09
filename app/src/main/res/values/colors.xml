@@ -68,6 +68,12 @@
         <item>@color/darkDotEight</item>
     </array>
 
+    <!-- Colors for Breathing Activity home page -->
+    <color name="breathingButton1">#1565C0</color>
+    <color name="breathingButton2">#1976D2</color>
+    <color name="breathingButton3">#1E88E5</color>
+    <color name="breathingButton4">#2196F3</color>
+
     <!--99ccff light blue-->
     <!--4da6ff medium blue-->
     <!--004080 dark blue-->
