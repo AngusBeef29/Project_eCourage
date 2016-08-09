@@ -20,15 +20,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SignUpActivity"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".MainActivity"
-            android:parentActivityName=".LoginActivity" />
         <activity
             android:name=".tools.breathingActivity"
             android:parentActivityName=".MainActivity" />

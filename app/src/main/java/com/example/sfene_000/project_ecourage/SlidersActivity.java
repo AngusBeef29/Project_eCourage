@@ -38,15 +38,27 @@ public class SlidersActivity extends AppCompatActivity {
     Button next;
     Button skip;
 
+    SessionManager session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sliderManager = new SliderManager(this);
+        session = new SessionManager(SlidersActivity.this);
+
+
         if(!sliderManager.Check()){
             sliderManager.setFirst(false);
-            Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
-            startActivity(i);
-            finish();
+            if (session.isLoggedIn()) {
+                Intent i = new Intent(SlidersActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            } else {
+                Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
+                startActivity(i);
+                finish();
+            }
+
         }
         if(Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);

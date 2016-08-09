@@ -2,6 +2,7 @@ package com.example.sfene_000.project_ecourage;
 
 import  android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.sfene_000.project_ecourage.R;
+import com.example.sfene_000.project_ecourage.user.User;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -34,13 +36,20 @@ import org.json.*;
 
 public class LoginActivity extends AppCompatActivity {
 
+    DBHandler db;
     EditText usernameField;
     EditText passwordField;
+    SessionManager session;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        db = new DBHandler(this);
+        session = new SessionManager(this);
+
         usernameField = (EditText)findViewById(R.id.usernameField);
         passwordField = (EditText)findViewById(R.id.passwordField);
         passwordField.setTypeface(Typeface.DEFAULT);
@@ -57,8 +66,6 @@ public class LoginActivity extends AppCompatActivity {
         String[] params = new String[]{username.toLowerCase(), passwordHash};
         LogInUser signUpUser = new LogInUser(this);
         signUpUser.execute(params);
-
-
 
     }
 
@@ -108,10 +115,21 @@ public class LoginActivity extends AppCompatActivity {
 
             if(username.length()>0 && password.length()>0){
                 String url = "http://ecourage.org/sql_query.php?nFunction=2&username="+username+"&password="+password;
+                ConnectionManager connectionManager = new ConnectionManager(url);
                 Log.d("password",url);
-                String responseMessage = (new ConnectionManager(url)).getResponseMessage();
+                String responseMessage = (connectionManager.getResponseMessage());
                 Log.d("password",responseMessage);
                 if(responseMessage.equals("log in successful")){
+
+                    try {
+                        user = new User(connectionManager.getJSONObj());
+                        db.addUser(user);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    session.createLoginSession(username);
+
                     return "logged in";
                 } else{
                     return "wrong password";
@@ -130,6 +148,7 @@ public class LoginActivity extends AppCompatActivity {
                 error.setText("incorrect passcode");
             } else {
                 Intent intent = new Intent(activity, MainActivity.class);
+                intent.putExtra("CurrentUser", user);
                 setResult(Activity.RESULT_OK, intent);
                 startActivity(intent);
                 finish();

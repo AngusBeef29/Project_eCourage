@@ -9,14 +9,16 @@ import android.widget.TextView;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple {link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link user.OnFragmentInteractionListener} interface
+ * {link user.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link user#newInstance} factory method to
+ * Use the {link user#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class UserPage extends Fragment {
+
+    SessionManager session;
     public static final String ARG_PAGE = "1";
 
     private int mPage;
@@ -26,11 +28,13 @@ public class UserPage extends Fragment {
         args.putInt(ARG_PAGE, page);
         UserPage fragment = new UserPage();
         fragment.setArguments(args);
+        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        session = new SessionManager(getContext());
         super.onCreate(savedInstanceState);
         //mPage = getArguments().getInt(ARG_PAGE);
     }
@@ -39,8 +43,9 @@ public class UserPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user, container, false);
-        TextView textView = (TextView) view;
-        textView.setText("Fragment #" + 1);
+//        TextView textView = (TextView) view;
+//        textView.setText("Fragment #" + 1);
         return view;
     }
+
 }
