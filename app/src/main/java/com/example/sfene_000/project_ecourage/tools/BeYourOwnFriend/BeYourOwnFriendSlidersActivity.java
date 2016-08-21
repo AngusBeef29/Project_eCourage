@@ -1,18 +1,15 @@
-package com.example.sfene_000.project_ecourage;
+package com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -21,13 +18,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/* This was accomplished by following tutorials on YouTube.
- * https://www.youtube.com/watch?v=va2IRW_e7_w
- * https://www.youtube.com/watch?v=9CJQXMVe1l8
- * https://www.youtube.com/watch?v=AptVoFZmsgw
- */
+import com.example.sfene_000.project_ecourage.LoginActivity;
+import com.example.sfene_000.project_ecourage.R;
+import com.example.sfene_000.project_ecourage.SessionManager;
+import com.example.sfene_000.project_ecourage.SliderManager;
 
-public class SlidersActivity extends AppCompatActivity {
+/**
+ * Created by geoffreyangus on 8/17/16.
+ */
+public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
@@ -43,22 +42,15 @@ public class SlidersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sliderManager = new SliderManager(this);
-        session = new SessionManager(SlidersActivity.this);
+        sliderManager = new SliderManager(this, "beYourOwnFriendSlider");
+        session = new SessionManager(BeYourOwnFriendSlidersActivity.this);
 
 
         if(!sliderManager.Check()){
             sliderManager.setFirst(false);
-            if (session.isLoggedIn()) {
-                Intent i = new Intent(SlidersActivity.this, MainActivity.class);
+                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, Be.class);
                 startActivity(i);
                 finish();
-            } else {
-                Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
-                startActivity(i);
-                finish();
-            }
-
         }
         if(Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
@@ -80,7 +72,7 @@ public class SlidersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sliderManager.setFirst(false);
-                Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
+                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -94,7 +86,7 @@ public class SlidersActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(current);
                 } else {
                     sliderManager.setFirst(false);
-                    Intent i = new Intent(SlidersActivity.this, LoginActivity.class);
+                    Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, LoginActivity.class);
                     startActivity(i);
                     finish();
                 }
@@ -182,4 +174,7 @@ public class SlidersActivity extends AppCompatActivity {
             container.removeView(v);
         }
     }
+
+
+
 }
