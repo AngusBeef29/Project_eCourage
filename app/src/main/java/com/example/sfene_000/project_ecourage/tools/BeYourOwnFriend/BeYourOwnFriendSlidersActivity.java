@@ -18,7 +18,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.sfene_000.project_ecourage.LoginActivity;
 import com.example.sfene_000.project_ecourage.R;
 import com.example.sfene_000.project_ecourage.SessionManager;
 import com.example.sfene_000.project_ecourage.SliderManager;
@@ -45,13 +44,12 @@ public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
         sliderManager = new SliderManager(this, "beYourOwnFriendSlider");
         session = new SessionManager(BeYourOwnFriendSlidersActivity.this);
 
-
-        if(!sliderManager.Check()){
-            sliderManager.setFirst(false);
-                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, Be.class);
-                startActivity(i);
-                finish();
-        }
+//        if(!sliderManager.Check()){
+//            sliderManager.setFirst(false);
+//                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, BeYourOwnFriendActivity.class);
+//                startActivity(i);
+//                finish();
+//        }
         if(Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
@@ -61,7 +59,7 @@ public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
         dotsLayout = (LinearLayout)findViewById(R.id.layoutDots);
         skip = (Button)findViewById(R.id.btn_skip);
         next = (Button)findViewById(R.id.btn_next);
-        layouts = new int[]{R.layout.intro_welcome, R.layout.intro_action, R.layout.intro_types, R.layout.intro_choice, R.layout.intro_simple, R.layout.intro_habits, R.layout.intro_commitment, R.layout.intro_daily};
+        layouts = new int[]{R.layout.activity_byof_1, R.layout.activity_byof_2, R.layout.activity_byof_3, R.layout.activity_byof_4, R.layout.activity_byof_5, R.layout.activity_byof_6, R.layout.activity_byof_7, R.layout.activity_byof_8, R.layout.activity_byof_9, R.layout.activity_byof_10, R.layout.activity_byof_11, R.layout.activity_byof_12};
         addBottomDots(0);
         changeStatusBarColor();
         viewPagerAdapter = new ViewPagerAdapter();
@@ -72,7 +70,7 @@ public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sliderManager.setFirst(false);
-                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, LoginActivity.class);
+                Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, BeYourOwnFriendActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -86,7 +84,7 @@ public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(current);
                 } else {
                     sliderManager.setFirst(false);
-                    Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, LoginActivity.class);
+                    Intent i = new Intent(BeYourOwnFriendSlidersActivity.this, BeYourOwnFriendActivity.class);
                     startActivity(i);
                     finish();
                 }

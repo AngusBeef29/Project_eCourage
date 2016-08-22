@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.BeYourOwnFriendSlidersActivity;
 import com.example.sfene_000.project_ecourage.tools.LiftYourMoodActivity;
 import com.example.sfene_000.project_ecourage.tools.breathingActivity.breathingActivityHome;
+import com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.BeYourOwnFriendActivity;
 import com.example.sfene_000.project_ecourage.user.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchGetSupport(View view) {
         Intent intent = new Intent(view.getContext(), LiftYourMoodActivity.class);
+        setResult(Activity.RESULT_OK, intent);
+        startActivity(intent);
+    }
+
+    public void launchOwnFriend(View view) {
+        Intent intent = new Intent(view.getContext(), BeYourOwnFriendSlidersActivity.class);
         setResult(Activity.RESULT_OK, intent);
         startActivity(intent);
     }

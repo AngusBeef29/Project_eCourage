@@ -56,4 +56,22 @@
     <string name="LYM_p8">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
     <string name="log_out">Log Out</string>
 
+    <!-- Be Your Own Friend Strings -->
+    <string name="byof_1">Log Out</string>
+    <string name="byof_2">Log Out</string>
+    <string name="byof_3">Log Out</string>
+    <string name="byof_4">Log Out</string>
+    <string name="byof_5">Log Out</string>
+    <string name="byof_6">Log Out</string>
+    <string name="byof_7">Log Out</string>
+    <string name="byof_8">Log Out</string>
+    <string name="byof_9">Log Out</string>
+    <string name="byof_10">Log Out</string>
+    <string name="byof_11">Log Out</string>
+    <string name="byof_12">Log Out</string>
+
+    <string name="byof_spinner_prompt">Test List</string>
+
+
+
 </resources>

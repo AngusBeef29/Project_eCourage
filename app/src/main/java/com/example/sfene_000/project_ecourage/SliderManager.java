@@ -11,9 +11,9 @@ public class SliderManager {
     SharedPreferences.Editor editor;
     Context context;
 
-    public SliderManager(Context context) {
+    public SliderManager(Context context, String prefName) {
         this.context = context;
-        pref = context.getSharedPreferences("first", 0);
+        pref = context.getSharedPreferences(prefName, 0);
         editor = pref.edit();
     }
 

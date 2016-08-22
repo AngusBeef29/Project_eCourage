@@ -54,6 +54,11 @@
         <item>@color/lightDotSix</item>
         <item>@color/lightDotSeven</item>
         <item>@color/lightDotEight</item>
+        <item>@color/lightDotOne</item>
+        <item>@color/lightDotTwo</item>
+        <item>@color/lightDotThree</item>
+        <item>@color/lightDotFour</item>
+
     </array>
 
     <!-- Array of Inactive (dark) dot colors for easy access later -->
@@ -66,6 +71,11 @@
         <item>@color/darkDotSix</item>
         <item>@color/darkDotSeven</item>
         <item>@color/darkDotEight</item>
+        <item>@color/darkDotOne</item>
+        <item>@color/darkDotTwo</item>
+        <item>@color/darkDotThree</item>
+        <item>@color/darkDotFour</item>
+
     </array>
 
     <!-- Colors for Breathing Activity home page -->

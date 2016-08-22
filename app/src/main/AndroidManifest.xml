@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SlidersActivity"
+            android:name=".IntroSlidersActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +30,16 @@
         <activity
             android:name=".tools.breathingActivity.breathingActivityHome"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".tools.BeYourOwnFriend.BeYourOwnFriendSlidersActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".tools.BeYourOwnFriend.BeYourOwnFriendActivity"
+            android:parentActivityName=".tools.BeYourOwnFriend.BeYourOwnFriendSlidersActivity" />
+        <activity
+            android:name=".tools.BeYourOwnFriend.BeYourOwnFriendConfirmThoughtsActivity"
+            android:parentActivityName=".tools.BeYourOwnFriend.BeYourOwnFriendActivity" />
+
         <activity android:name=".tools.LiftYourMoodActivity" />
         <activity android:name=".tools.breathingActivity.breathingActivityInfo" />
         <activity android:name=".tools.breathingActivity.breathingActivity1" />

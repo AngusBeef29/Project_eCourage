@@ -24,7 +24,7 @@ import android.widget.TextView;
  * https://www.youtube.com/watch?v=AptVoFZmsgw
  */
 
-public class BeYourOwnFriendSlidersActivity extends AppCompatActivity {
+public class IntroSlidersActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
