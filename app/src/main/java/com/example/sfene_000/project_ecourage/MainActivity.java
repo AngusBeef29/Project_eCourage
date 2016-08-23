@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         tab.select();
 
         db = new DBHandler(this);
-        Log.d("MAINACTIVITY",db.getUser("admin").toString());
+//        Log.d("MAINACTIVITY",db.getUser("admin").toString());
     }
 
 

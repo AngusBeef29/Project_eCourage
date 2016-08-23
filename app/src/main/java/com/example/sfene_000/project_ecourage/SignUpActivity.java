@@ -16,15 +16,19 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.sfene_000.project_ecourage.user.User;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
@@ -37,6 +41,10 @@ public class SignUpActivity extends AppCompatActivity {
     EditText usernameField;
 
     Boolean isCoach = false;
+    User user;
+    SessionManager session;
+    DBHandler db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +60,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         emailField = (EditText) findViewById(R.id.emailField);
 
-       usernameField = (EditText) findViewById(R.id.usernameField);
+        db = new DBHandler(this);
+        session = new SessionManager(this);
+
+        usernameField = (EditText) findViewById(R.id.usernameField);
 
     }
 
@@ -104,7 +115,7 @@ public class SignUpActivity extends AppCompatActivity {
         return null;
     }
 
-    private static String hexToString(byte[] bytes) {
+        private static String hexToString(byte[] bytes) {
         StringBuffer buff = new StringBuffer();
         for (int i = 0; i < bytes.length; i++) {
             int val = bytes[i];
@@ -133,9 +144,22 @@ public class SignUpActivity extends AppCompatActivity {
             String email = params[2];
             Random randomGenerator = new Random();
             if(username.length()>0 && password.length()>0 && email.length()>0){
-                String url = "http://ecourage.org/sql_query.php?nFunction=4&username="+username+"&password="+password+"&coach_code="+ randomGenerator.nextInt(100000) +"&email="+email;
-                String responseMessage = (new ConnectionManager(url)).getResponseMessage();
+                String url = "http://ecourage.org/sql_query.php?nFunction=4&username="+username+"&password="+password+"&isCoach="+(isCoach ? 1 :0) +"&email=" + email;
+
+                Log.d("URL",url);
+                ConnectionManager connectionManager = new ConnectionManager(url);
+                String responseMessage = connectionManager.getResponseMessage();
                 if(responseMessage.equals("user successfully created")){
+                    try {
+
+                        user = new User(connectionManager.getJSONObj());
+                        db.addUser(user);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    session.createLoginSession(username);
+
                     return "user created";
                 } else{
                     return "user exists already";
