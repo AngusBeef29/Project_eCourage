@@ -13,21 +13,6 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:background="@color/introSliderTwo"
-            android:src="@drawable/steer_icon"   />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/introSliderTwo"
-            android:text="@string/slideFour_title"
-            android:textColor="@android:color/white"
-            android:textSize="37dp"
-            android:textStyle="bold"  />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,9 +20,21 @@
             android:background="@color/introSliderTwo"
             android:paddingLeft="@dimen/description_padding"
             android:paddingRight="@dimen/description_padding"
-            android:text="WASSUP"
+            android:text="@string/byof_10"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_description"  />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/introSliderTwo"
+        android:text="@string/byof_title"
+        android:textColor="@android:color/white"
+        android:textSize="37dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="30dp" />
 </RelativeLayout>

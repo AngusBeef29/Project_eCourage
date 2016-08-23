@@ -1,12 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/layoutContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.1"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.8">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="10dip"
+                android:layout_height="25dip" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Be Your Own Friend"
+                android:gravity="center_horizontal" />
+
+            <View
+                android:layout_width="10dip"
+                android:layout_height="25dip" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Ok, to help you, we’ve developed a list of some good counterarguments that you can read and practice thinking.  Click on at least two helpful counterarguments for each unhelpful thought."
+                android:textSize="20sp"></TextView>
+
+            <View
+                android:layout_width="10dip"
+                android:layout_height="15dip" />
+
+            <ListView
+                android:id="@+id/lvMain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"></ListView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.1"></RelativeLayout>
+
+</LinearLayout>
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/submit"
-        android:layout_gravity="right" />
-</LinearLayout>
+        android:onClick="showResult"
+        android:text="Save"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        ></Button>
+    </RelativeLayout>
