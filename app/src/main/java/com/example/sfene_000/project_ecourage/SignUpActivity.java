@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -34,6 +35,8 @@ public class SignUpActivity extends AppCompatActivity {
     EditText confirmPasswordField;
     EditText emailField;
     EditText usernameField;
+
+    Boolean isCoach = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +74,19 @@ public class SignUpActivity extends AppCompatActivity {
         String[] params = new String[]{username.toLowerCase(), encode(newPassword),email};
         SignUpUser signUpUser = new SignUpUser(this);
         signUpUser.execute(params);
+
+    }
+
+    public void onCoachCheckboxClicked(View view){
+        final CheckBox checkBox = (CheckBox) findViewById(R.id.coach_checkbox_id);
+        if (checkBox.isChecked()) {
+            isCoach=true;
+            Log.d("isCoach", "true");
+        } else{
+            isCoach=false;
+            Log.d("isCoach", "false");
+        }
+
 
     }
 
