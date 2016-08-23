@@ -57,21 +57,21 @@
     <string name="log_out">Log Out</string>
 
     <!-- Be Your Own Friend Strings -->
-    <string name="byof_1">Log Out</string>
-    <string name="byof_2">Log Out</string>
-    <string name="byof_3">Log Out</string>
-    <string name="byof_4">Log Out</string>
-    <string name="byof_5">Log Out</string>
-    <string name="byof_6">Log Out</string>
-    <string name="byof_7">Log Out</string>
-    <string name="byof_8">Log Out</string>
-    <string name="byof_9">Log Out</string>
-    <string name="byof_10">Log Out</string>
-    <string name="byof_11">Log Out</string>
-    <string name="byof_12">Log Out</string>
+    <string name="byof_1">Trying to make sense of what happened is part of the natural human response to trauma.  Most people spend a lot of time thinking about what happened, why it happened, and what it means for the future.</string>
+    <string name="byof_2">When bad things happen, we often find ourselves thinking a lot. In fact, traumatic events can weaken our confidence in ourselves, change our view of others, and make us worry.</string>
+    <string name="byof_3">How you think - what you say to yourself about what happened or is happening - will affect your mood and emotions, how you cope with your challenges, and how effectively you build your life.</string>
+    <string name="byof_4">Being your own friend means talking to yourself in a way that strengthens you, helps you remain positive, and keeps you stay focused on the path forward.</string>
+    <string name="byof_5">Helpful thoughts can help you feel in control and able to cope.  For example, thoughts like “I’ve come through other things, I can come through this too” or “Things will get better with time” or “I’ve just got to take things slowly, one day at a time.”</string>
+    <string name="byof_6">It is important for you to become more aware of what you are saying to yourself, and to gradually replace your negative self-talk with thoughts that help your recovery.  </string>
+    <string name="byof_7">It’s not that you’re wrong to think in any particular way.  Your beliefs make sense in terms of what has happened to you.  But the goal here is to help you think about things in ways that help you feel more calm and positive.</string>
+    <string name="byof_8">Beliefs and Judgments are not the same things as “facts.” They are opinions, judgments, and interpretations that could be true or not true, exaggerated or realistic, and helpful or unhelpful. </string>
+    <string name="byof_9">Many people feeling strong stress often wonder, “Am I going crazy?”  This is a thought or belief, not a fact.  It is not a fact that you’re going crazy.  There is nothing crazy about having uncontrollable distress and upsetting thoughts after trauma; they happen to almost everyone.  </string>
+    <string name="byof_10">Many people think that having trouble coping with trauma means that they’re “weak.” But actually many strong, competent people have very painful reactions to stress.  </string>
+    <string name="byof_11">The more you tell yourself that you’re crazy or weak, the more you feel bad.  In reverse, if you tell yourself that these reactions are a normal part of getting over a trauma, and that you can learn ways to help yourself cope with these reactions, you may feel less bad.</string>
+    <string name="byof_12">We want to help you rethink your upsetting beliefs and replace unhelpful self-talk with helpful self-talk that helps you feel stronger and more in control.</string>
+
+<string name="byof_title">Be Your Own Friend</string>
 
     <string name="byof_spinner_prompt">Test List</string>
-
-
 
 </resources>

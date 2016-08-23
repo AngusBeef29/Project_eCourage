@@ -35,9 +35,11 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".tools.BeYourOwnFriend.BeYourOwnFriendActivity"
+            android:windowSoftInputMode="adjustResize"
             android:parentActivityName=".tools.BeYourOwnFriend.BeYourOwnFriendSlidersActivity" />
         <activity
             android:name=".tools.BeYourOwnFriend.BeYourOwnFriendConfirmThoughtsActivity"
+            android:windowSoftInputMode="adjustResize"
             android:parentActivityName=".tools.BeYourOwnFriend.BeYourOwnFriendActivity" />
 
         <activity android:name=".tools.LiftYourMoodActivity" />

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="arguments">
+        <item>My stress reactions mean that I am a weak person.</item>
+        <item>People cannot be trusted.</item>
+        <item>I will never be able to feel normal emotions again.</item>
+        <item>I have no future.</item>
+        <item>I will not be able to tolerate my thoughts and I will fall apart.</item>
+        <item>Nothing good can happen to me anymore.</item>
+        <item>My reactions since the event mean that I am going crazy.</item>
+    </array>
+
+    <!--My stress reactions mean that I am a weak person.-->
+    <array name="ca0">
+        <item>Like most people, I am sometimes weak and sometimes strong; I’m not a weak person in all situations.</item>
+        <item>Calling myself weak will not help me get through this.</item>
+        <item>I’m a human being.</item>
+        <item>My reactions are common among trauma survivors and don’t mean that I am weak.</item>
+        <item>I can take action to act in a way that I respect.</item>
+        <item>I am a good person.</item>
+        <item>It’s okay to feel weak sometimes, I’m only human.</item>
+        <item>It’s a myth that it’s possible to be strong in all situations.</item>
+        <item>I can begin to feel strong again.</item>
+        <item>I am doing things that a strong person does.</item>
+        <item>I will feel stronger as time passes and I recover.</item>
+    </array>
+
+    <!--People cannot be trusted.-->
+    <array name="ca1">
+        <item>Many people can be trusted, some cannot.</item>
+        <item>It’s common to have trouble trusting other people after being harmed by others.</item>
+        <item>I can take things slowly with other people.</item>
+        <item>Just because I feel that other people cannot be trusted doesn’t mean it’s true.</item>
+        <item>I can learn to trust in a way that is safe.</item>
+        <item>I don’t have to trust everyone, just some special people.</item>
+    </array>
+
+    <!--I will never be able to feel normal emotions again.-->
+    <array name="ca2">
+        <item>No one can predict how I will feel in the future.</item>
+        <item>Just because I feel this way doesn’t mean it’s true.</item>
+        <item>My trauma emotions are normal.</item>
+        <item>How I feel is normal under the circumstances.</item>
+        <item>Many things about me are good.</item>
+        <item>Trauma survivors can recover but recovery takes time.</item>
+        <item>I’m still a good person.</item>
+        <item>My emotional life can recover with time.</item>
+    </array>
+
+    <!--I have no future.-->
+    <array name="ca3">
+        <item>The future has not yet been written.</item>
+        <item>Just because I feel this way doesn’t mean it’s true.</item>
+        <item>I can take action to build a future for myself.</item>
+        <item>My life has been harmed but I will not let it be destroyed.</item>
+        <item>I am a good person and good things can happen to me.</item>
+        <item>Some good things are happening to me now and more will happen in the future.</item>
+        <item>Feeling this way does not mean it’s true.</item>
+    </array>
+
+    <!--I will not be able to tolerate my thoughts and I will fall apart.-->
+    <array name="ca4">
+        <item>Just because I get upset doesn’t mean I will fall apart.</item>
+        <item>It’s normal to have difficulty coping with traumatic memories.</item>
+        <item>It’s okay to feel afraid.</item>
+        <item>If I fall apart, it’s not the end of the world.</item>
+        <item>I can learn to tolerate my emotions.</item>
+        <item>My intense emotions are not dangerous.</item>
+    </array>
+
+    <!--Nothing good can happen to me anymore.-->
+    <array name="ca5">
+        <item>The future has not yet been written.</item>
+        <item>Just because I feel this way doesn’t mean it’s true.</item>
+        <item>I can take action to build a future for myself.</item>
+        <item>My life has been harmed but I will not let it be destroyed.</item>
+        <item>I am a good person and good things can happen to me.</item>
+        <item>Some good things are happening to me now and more will happen in the future.</item>
+        <item>Feeling this way does not mean it’s true.</item>
+    </array>
+
+    <!--My reactions since the event mean that I am going crazy.-->
+    <array name="ca6">
+        <item>no counterarguments yet!</item>
+    </array>
+
+
+</resources>

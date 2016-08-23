@@ -1,114 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-
-        <View
-            android:layout_width="10dip"
-            android:layout_height="15dip" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Add relevant feelings:"
-            android:id="@+id/multiSpinnerLabel" />
-
-        <View
-            android:layout_width="10dip"
-            android:layout_height="15dip" />
-
-        <com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.MultiSpinner
-            android:id="@+id/byof_spinner"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:prompt="@string/byof_spinner_prompt"
-            />
-
-        <View
-            android:layout_width="10dip"
-            android:layout_height="30dip" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Or add your own in the field below:"
-            android:id="@+id/customThoughtText"
-            />
-
-        <View
-            android:layout_width="10dip"
-            android:layout_height="15dip" />
-
-    </LinearLayout>
-
-    <RelativeLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <EditText
-            android:id="@+id/custom_thought_field"
-            android:layout_width="306dp"
-            android:layout_height="wrap_content"
-            android:hint="Feeling."
-            android:typeface="normal"
-            android:paddingLeft="10dp"
-            android:layout_toLeftOf="@+id/byof_add_thoughts"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:layout_width="59dp"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:id="@+id/byof_add_thoughts"
-            android:onClick="addCustomThought"
-            android:layout_gravity="right"
-            android:layout_alignBottom="@+id/custom_thought_field"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-    </RelativeLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="0.1"
-        >
-
-        <View
-            android:layout_width="10dip"
-            android:layout_height="50dip" />
-
-        <ListView
-            android:id="@android:id/list"
+        <LinearLayout
+            android:id="@+id/layoutContainer"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:drawSelectorOnTop="false"
-            />
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.1"></RelativeLayout>
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.8">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Proceed"
-            android:id="@+id/byof_submit_thoughts"
-            android:onClick="submitThoughts"
-            android:layout_alignParentBottom="true"/>
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="25dip" />
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Be Your Own Friend"
+                                android:textSize="30sp" />
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="25dip" />
+
+                            <TextView
+                                android:id="@+id/multiSpinnerLabel"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="We’ll help you develop a list of some good counterarguments for your own unhelpful thoughts.  But first, help us do this by clicking on at least 5 of the following unhelpful thoughts that you think about and make you feel bad.
+"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="25dip" />
+
+                            <com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.MultiSpinner
+                                android:id="@+id/byof_spinner"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:prompt="@string/byof_spinner_prompt" />
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="30dip" />
+
+                            <TextView
+                                android:id="@+id/customThoughtText"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Or add your own thoughts below:"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="10dip"
+                                android:layout_height="15dip" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true">
+
+                            <EditText
+                                android:id="@+id/custom_thought_field"
+                                android:layout_width="306dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_toLeftOf="@+id/byof_add_thoughts"
+                                android:hint="Feeling."
+                                android:paddingLeft="10dp"
+                                android:typeface="normal"
+                                android:nextFocusUp="@id/custom_thought_field"
+                                android:nextFocusLeft="@id/custom_thought_field"/>
+
+                            <Button
+                                android:id="@+id/byof_add_thoughts"
+                                android:layout_width="59dp"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/custom_thought_field"
+                                android:layout_alignParentEnd="false"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="right"
+                                android:onClick="addCustomThought"
+                                android:text="+"
+                                android:layout_alignParentTop="true" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="171dp"
+                            android:orientation="vertical">
+
+
+                            <ListView
+                                android:id="@android:id/list"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:drawSelectorOnTop="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.1"></RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/byof_submit_thoughts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="submitThoughts"
+        android:text="Proceed" />
 
 </RelativeLayout>
