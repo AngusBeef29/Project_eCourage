@@ -19,5 +19,16 @@
         android:text="@string/log_out"
         android:textColor="@color/white" />
 
+    <View android:layout_width="10dip" android:layout_height="10dip"/>
+
+    <Button
+        android:id="@+id/getCoachButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="inviteCoach"
+        android:text="@string/invite_a_coach_button"
+        android:textColor="@color/white" />
+
 
 </LinearLayout>

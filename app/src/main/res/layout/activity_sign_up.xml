@@ -16,7 +16,8 @@
     <RelativeLayout
         android:layout_width="1dip"
         android:layout_height="fill_parent"
-        android:layout_weight="0.7">
+        android:layout_weight="0.7"
+        android:gravity="center_horizontal">
 
         <!-- This is the part that's 70% of the total width. I'm inserting a LinearLayout and buttons.-->
         <LinearLayout
@@ -24,6 +25,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:gravity="center"
             android:orientation="vertical">
 
             <View
@@ -51,10 +53,13 @@
                 android:textSize="15sp"
                 android:gravity="center_horizontal"
                 android:typeface="normal" />
+            <View
+                android:layout_width="10dip"
+                android:layout_height="10dip" />
 
             <View
                 android:layout_width="10dip"
-                android:layout_height="75dip" />
+                android:layout_height="25dip" />
 
             <EditText
                 android:id="@+id/emailField"
@@ -124,9 +129,17 @@
                 android:paddingLeft="10dp" />
 
             <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/textBoxBorder"/>
+                android:layout_width="10dip"
+                android:layout_height="25dp" />
+
+            <CheckBox android:id="@+id/coach_checkbox_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_activity_are_you_a_coach"
+                android:textColor="@color/white"
+                android:buttonTint="@color/white"
+                android:onClick="onCoachCheckboxClicked"
+              />
 
             <!--this was hacky, fix this 25dp thing-->
             <View

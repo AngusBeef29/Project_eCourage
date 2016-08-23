@@ -41,9 +41,14 @@
     <!-- Sign up -->
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_get_support">GetSupport</string>
+    <string name="title_activity_are_you_a_coach">Are You a Coach?</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--coach stuff-->
+    <string name="invite_a_coach_button">Invite a Coach</string>
+    <string name="invite_a_coach_title">Invite a Coach</string>
+    <string name="coach_username">Coach Username</string>
+    <string name="send_invite">Send Invite</string>
+    <string name="your_coach_is">Your Coach is a friend or family member who connects with you and helps monitor your progress</string>
 
     <!-- Lift Your Mood Strings -->
     <string name="LYM_p1">Doing Positive Activities can slowly make us feel more positive about life, that life is worth living.</string>
@@ -71,7 +76,6 @@
     <string name="byof_12">Log Out</string>
 
     <string name="byof_spinner_prompt">Test List</string>
-
 
 
 </resources>

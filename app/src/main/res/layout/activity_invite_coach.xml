@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutContainer"
+    android:background="@color/colorPrimary"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.15"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.7">
+
+
+
+        <!-- This is the part that's 70% of the total width. I'm inserting a LinearLayout and buttons.-->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/invite_a_coach_title"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="35sp"
+                android:gravity="center_horizontal"
+                android:typeface="normal"
+                />
+            <View
+                android:layout_width="10dip"
+                android:layout_height="30dip" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/your_coach_is"
+                android:id="@+id/coach_descriptor"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:typeface="normal" />
+
+            <View
+                android:layout_width="10dip"
+                android:layout_height="50dip" />
+
+            <EditText
+                android:id="@+id/usernameField"
+                style="@style/LoginTheme.Text"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:inputType="textPersonName"
+                android:hint="@string/coach_username"
+                android:typeface="normal"
+                android:paddingLeft="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/textBoxBorder"/>
+
+
+
+            <View
+                android:layout_width="10dip"
+                android:layout_height="50dip" />
+
+            <Button
+                style="@style/LoginTheme.Button"
+                android:id="@+id/sendInvite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="sendInvite"
+                android:text="@string/send_invite" />
+
+
+
+        </LinearLayout>
+
+        <!-- 70% Width End-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="1dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.15"></RelativeLayout>
+
+</LinearLayout>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sfene_000.project_ecourage">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/appicon"
@@ -13,17 +15,17 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".SignUpActivity"
             android:parentActivityName=".LoginActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
             android:parentActivityName=".LoginActivity" />
@@ -39,7 +41,6 @@
         <activity
             android:name=".tools.BeYourOwnFriend.BeYourOwnFriendConfirmThoughtsActivity"
             android:parentActivityName=".tools.BeYourOwnFriend.BeYourOwnFriendActivity" />
-
         <activity android:name=".tools.LiftYourMoodActivity" />
         <activity android:name=".tools.breathingActivity.breathingActivityInfo" />
         <activity android:name=".tools.breathingActivity.breathingActivity1" />
@@ -47,7 +48,8 @@
         <activity android:name=".tools.breathingActivity.breathingActivity3" />
         <activity
             android:name=".tools.GetSupport"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".user.invite_coach"></activity>
     </application>
 
 </manifest>
