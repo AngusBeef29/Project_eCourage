@@ -2,13 +2,12 @@ package com.example.sfene_000.project_ecourage;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
@@ -16,19 +15,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.sfene_000.project_ecourage.user.DBHandler;
 import com.example.sfene_000.project_ecourage.user.User;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Random;
@@ -134,6 +125,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private class SignUpUser extends AsyncTask<String, Void, String> {
         private Activity activity;
+        private String username;
         public SignUpUser(Activity activity){
             this.activity = activity;
         }
@@ -153,6 +145,7 @@ public class SignUpActivity extends AppCompatActivity {
                     try {
 
                         user = new User(connectionManager.getJSONObj());
+                        username = user.getUsername();
                         db.addUser(user);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -178,6 +171,10 @@ public class SignUpActivity extends AppCompatActivity {
                 setErrorMessage("Something went wrong on our end :( Try again Later");
             } else {
                 Intent intent = new Intent(activity, MainActivity.class);
+//                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
+//                SharedPreferences.Editor editor = prefs.edit();
+//                editor.putString("currentUser", username);
+//                editor.commit();
                 setResult(Activity.RESULT_OK, intent);
                 startActivity(intent);
                 finish();

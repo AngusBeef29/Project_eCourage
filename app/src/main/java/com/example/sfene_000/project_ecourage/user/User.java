@@ -3,8 +3,6 @@ package com.example.sfene_000.project_ecourage.user;
 import android.content.Context;
 import android.util.Log;
 
-import com.example.sfene_000.project_ecourage.DBHandler;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 

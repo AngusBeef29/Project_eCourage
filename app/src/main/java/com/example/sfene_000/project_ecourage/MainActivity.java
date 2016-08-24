@@ -2,7 +2,9 @@ package com.example.sfene_000.project_ecourage;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +14,7 @@ import android.view.View;
 import com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.BeYourOwnFriendSlidersActivity;
 import com.example.sfene_000.project_ecourage.tools.LiftYourMoodActivity;
 import com.example.sfene_000.project_ecourage.tools.breathingActivity.breathingActivityHome;
-import com.example.sfene_000.project_ecourage.tools.BeYourOwnFriend.BeYourOwnFriendActivity;
+import com.example.sfene_000.project_ecourage.user.DBHandler;
 import com.example.sfene_000.project_ecourage.user.User;
 import com.example.sfene_000.project_ecourage.user.invite_coach;
 
@@ -41,8 +43,15 @@ public class MainActivity extends AppCompatActivity {
         TabLayout.Tab tab = tabLayout.getTabAt(1);
         tab.select();
 
+
         db = new DBHandler(this);
-//        Log.d("MAINACTIVITY",db.getUser("admin").toString());
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+//        Log.d("name",prefs.getString("currentUser",""));
+//        user = db.getUser("name");
+//        if(user !=null){
+//            Log.d("name",user.getUsername());
+//        }
+
     }
 
 
@@ -79,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
         setResult(Activity.RESULT_OK, intent);
         startActivity(intent);
     }
+
+
 
 
 }

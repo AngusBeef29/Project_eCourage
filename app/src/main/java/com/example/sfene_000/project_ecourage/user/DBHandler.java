@@ -1,4 +1,4 @@
-package com.example.sfene_000.project_ecourage;
+package com.example.sfene_000.project_ecourage.user;
 
 import android.content.ContentValues;
 import android.content.Context;
